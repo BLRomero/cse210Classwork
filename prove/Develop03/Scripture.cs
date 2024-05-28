@@ -4,7 +4,7 @@ using System.IO;
 
 public class Scripture
 {
-    
+
     public static void LoadSingleVerse()
     {
         // Specify the file name
@@ -23,16 +23,18 @@ public class Scripture
                 {
                     // Split the line by the "|" character to separate date, prompt, and content
                     string[] parts = line.Split('|');
-                    if (parts.Length == 3)
+                    if (parts.Length == 4)
                     {
                         // Extract date, prompt, and content from the parts array
-                        string bookChapter = parts[0].Trim();
-                        int verse = int.Parse(parts[1].Trim());
-                        string content = parts[2].Trim();
-                        
+                        string book = parts[0].Trim();
+                        int chapter = int.Parse(parts[1].Trim());
+                        int verse = int.Parse(parts[2].Trim());
+                        string content = parts[3].Trim();
+
+                        Reference reference = new Reference(book, chapter, verse);
 
                         // Display the entry (you can modify this part to parse and store entries)
-                        Console.WriteLine($"{bookChapter} {verse}");
+                        Console.WriteLine(reference);
                         Console.WriteLine($"{content}");
                         Console.WriteLine();
                         break;
@@ -55,8 +57,9 @@ public class Scripture
         // Wait for user input before returning
         Console.ReadLine();
     }
-    public static void LoadMultipleVerses(){
-         string fileName = "scripture.txt";
+    public static void LoadMultipleVerses()
+    {
+        string fileName = "scripture.txt";
 
         try
         {
@@ -71,23 +74,26 @@ public class Scripture
                 {
                     // Split the line by the "|" character to separate date, prompt, and content
                     string[] parts = line.Split('|');
-                    if (parts.Length == 3)
+                    if (parts.Length == 4)
                     {
                         // Extract date, prompt, and content from the parts array
-                        string bookChapter = parts[0].Trim();
-                        int verse = int.Parse(parts[1].Trim());
-                        string content = parts[2].Trim();
-                        
+                        string book = parts[0].Trim();
+                        int chapter = int.Parse(parts[1].Trim());
+                        int verse = int.Parse(parts[2].Trim());
+                        string content = parts[3].Trim();
+
+                        Reference reference = new Reference(book, chapter, verse);
 
                         // Display the entry (you can modify this part to parse and store entries)
-                        Console.WriteLine($"{bookChapter} {verse}");
+                        Console.WriteLine(reference);
                         Console.WriteLine($"{content}");
                         Console.WriteLine();
-                    
+
+
                     }
                 }
 
-                Console.WriteLine("Single verse loaded successfully.");
+                Console.WriteLine("Multiple verses loaded successfully.");
             }
             else
             {
@@ -105,4 +111,3 @@ public class Scripture
     }
 }
 
-    
