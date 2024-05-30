@@ -84,6 +84,7 @@ public class Scripture
 
     public static void DisplayVerses(List<Scripture> scriptures)
     {
+        Console.Clear();
         foreach (var scripture in scriptures)
         {
             Console.WriteLine(scripture);

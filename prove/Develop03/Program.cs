@@ -21,7 +21,7 @@ class Program
             Console.WriteLine("Type 'q' to quit the program.");
             Console.WriteLine("What would you like to do?");
             input = Console.ReadLine().ToLower();
-
+           
             switch (input)
             {
                 case "1":
