@@ -30,9 +30,13 @@ class Program
                     break;
 
                 case "2":
-                    Console.WriteLine(" Reflection Activity");
+                    ReflectionActivity reflectionActivity = new ReflectionActivity(
+                        "Reflection Activity", 
+                        "You have completed the Reflection Activity."
+                    );
+                    reflectionActivity.Start();
                     break;
-
+                    
                 case "3":
                     Console.WriteLine(" Listing Activity");
                     break;
