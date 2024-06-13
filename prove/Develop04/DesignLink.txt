@@ -1,0 +1,14 @@
+http://www.plantuml.com/plantuml/png/dP91JlCm58JtFiMJ_asgdrwWOb4A225HKPK3H2OnmL9YL_PpKGNS7Jc9Cp8fBDXLRsQ-pAHPUvQEGzUAgfNUqyxPnibEl0iY-a-bh5WVDPzML-EFuNwZ_Q6LfwqoeLYiZbRND0ZxOAR3fnYXATjJ_r7PFrERPgkyburQaMUdJJE8ojIGQD94f2TGyGFXWh9qEY_wy9tYfpnMB98Z6MuHp-HUlxR1S6tVua9j6FisJab-ZRuuS4dbStzGzsQs4EfZOAXu2c35u0CaRHpf0CnsRf0yltE32d2SAm6Tuf-ApNlrqggAjJLfj9EcjjtEsUx0e574mLpaBlGUUksXSju9b7cN1-qvlVtVcoJhdsi0WKrmn4eYVQHq-R5Suar-koEU2zEOjJ9rwDel
+
+
+
+
+Prof comments  
+*base activity Classes- attributes    
+    All classes also have a duration. Also, you normally would have a name and description and then generate start/end messages.  -.3points
+
+*derived classes- attributes
+    The reflection activities should include a list of random prompts as well as a list of reflection questions. The Listing class should have a list of prompts. You have them as string types. -.3points
+
+
+*all other requirements are complete according to the grading rubric. 
