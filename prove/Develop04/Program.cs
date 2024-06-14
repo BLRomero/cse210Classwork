@@ -38,8 +38,13 @@ class Program
                     break;
                     
                 case "3":
-                    Console.WriteLine(" Listing Activity");
+                    ListingActivity listingActivity = new ListingActivity(
+                        "Listing Activity", 
+                        "You have completed the Listing Activity."
+                    );
+                    listingActivity.Start();
                     break;
+                    
                 case "q":
                     Environment.Exit(0);
                     break;
