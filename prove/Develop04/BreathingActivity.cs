@@ -13,6 +13,7 @@ public class BreathingActivity : Activity
         Console.Write("Enter the duration of the activity in seconds: ");
         if (int.TryParse(Console.ReadLine(), out int duration))
         {
+            Console.WriteLine("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
             Console.WriteLine("Get ready to begin...");
             PauseWithCountdown(3);
 
