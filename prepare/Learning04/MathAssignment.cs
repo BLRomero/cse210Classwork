@@ -7,9 +7,10 @@ public class MathAssignment : Assignment
     private string _problems = "";
 
     // Constructor Default
-    public MathAssignment(){
-            _textbookSection = "Unknown";
-            _problems = "0-0";
+    public MathAssignment()
+    {
+        _textbookSection = "Unknown";
+        _problems = "0-0";
     }
 
     // base class constructor
