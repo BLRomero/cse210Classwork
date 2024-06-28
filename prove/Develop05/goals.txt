@@ -1,0 +1,4 @@
+1095
+SimpleGoal|Read Liahona Today|25|True
+EternalGoal|Attend the Temple|250
+ChecklistGoal|Read scriptures 5 times this week|50|5|5|10
