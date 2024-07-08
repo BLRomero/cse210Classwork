@@ -18,9 +18,9 @@ class Address
 
     }
 
-    // IsUSA(Boolean){
-
-    // }
+   public bool IsUSA(){
+        return _country.Equals("USA", StringComparison.OrdinalIgnoreCase);
+    }
     public string GetFullAddress()
     {
         return ($"{_streetAddress} {_city}, {_state}, {_country}");
