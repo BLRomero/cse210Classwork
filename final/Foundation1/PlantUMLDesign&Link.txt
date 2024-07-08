@@ -1,0 +1,35 @@
+www.plantuml.com/plantuml/png/TL5BQiCm4Dth50FTs2IzW2WX9TlGTX6w3MeqTGJwW3GAXPAx5oiZrMwTZK7lpRpFU9j8HShEYfDLAS5R34DK3iIt001uX8lH6FOcaOJn-_G-lZU5N47ClkibN8BHuYfOeapm_WCSoP152OcYyKC5LQPpY7zHYtwWimJZgKAdu1nwIko-kpqtel2mkfbrCuyri7fxJtHxJgwqPgsEBIGmm8LuS41woUu3u-idywdhEM8TE8psNT_gDEAv15bYzYNIFwMfnRnmEoyZxGSTlNBOmc6hNMckTy0lQXGRrWlSKLZ3mcu_kSjyRQdcxbTWGb_55htEplu0 
+
+@startuml
+class Program 
+{
+    - videoList: List<Video>
+    + run(): void
+}
+
+class Video
+{
+    # _title: string
+    # _author: string
+    # _length: int
+    # _comments: List<Comment>
+
+     + Video(title: string, author: string, length: int)
+    + addComment(comment: Comment): void
+    + getNumberOfComments(): int
+    + getTitle(): string
+    + getAuthor(): string
+    + getLength(): int
+    + getComments(): List<Comment>
+}
+
+class Comment
+{
+    - _nameOfCommenter: string
+    - _commentText: string
+
+    + Comment(nameOfCommenter: string, commentText: string)
+    + getNameOfCommenter(): string
+    + getCommentText(): string
+}
+@enduml

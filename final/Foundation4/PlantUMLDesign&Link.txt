@@ -1,0 +1,41 @@
+www.plantuml.com/plantuml/png/dPB1QiCm38RlUWh1BYrRNo3iqD71BZkCzG6AvdZ5O3l1bZj2jdUVqqMcXgs1NKBq__gL3odRo1GuEGkWBCM8VUYEWHoES235vcHuQF1XVeEG_6hTuAapBNpD2J57kC53IwmRd9vid3uhAH2RpZTeFCDjQL_LhNTODQvpvvFcVQzrEttntNR4FzeBANqfxSYgP8cra6MDtYA7p7-UaPoZC4nk5eq_5lBNv7skHzXaJ1EPlD9bhhZNENDP1GNySLQNG7_ZmmAu6vGLm3YjeWmJQudkCbNlL13-WRN_CCu9bwK-oct5MAAIZ20zv_eleYiq8FyItdzkDdAmMYrCjIpxWwtsRNBs6m00 
+
+@startuml
+class program {
+_activity: Activity
+run(): void
+}
+class Activity{
+# _date: datetime
+# _duration: int
++ Activity(date: datetime, duration: int)
++ GetSpeed(): float
++ GetPace(): float
++ Calculate(): void
++ abstract GetSummary(): string
+}
+class Running{
+- _distance: float
++ Running(date: datetime, duration: int, distance: float)
++ GetDistance(): float
++ Calculate(): void
++ GetSummary(): string 
+}
+class Cycling{
+- _speed: float
++ Cycling(date: datetime, duration: int, speed: float)
++ GetSpeed(): void
++ Calculate(): void
++ GetSummary(): string 
+}
+class Swimming{
+- _laps: int
++ Swimming(date: datetime, duration: int, laps: int)
++ GetLaps(): void
++ Calculate(): 
++ GetSummary(): string 
+}
+Activity <|-- Running
+Activity <|-- Swimming
+Activity <|-- Cycling
+@enduml

@@ -1,0 +1,52 @@
+www.plantuml.com/plantuml/png/jLEnJiCm4Dtp5PPO4hNzWS1GH4iN15LRmOXEyL4idAIoBqK8-7SkTOFZU80bIvgyTxvxxvqxjmI6cb8dXGPhnThKUmDbyfcOfagp_5WhcNoVoUKHAsBgGZnZ-xfJf34NbeogzYqgqHP67KZLLG03SLdx95LYY_3l004f3LhRFyRIAWb6Bf10wO1wQRGUmid42SpJMDnKnD8O38LD1J-3xu6eZ4Uia9Q_xJaWnpXYuMSC6I0kzgqTkkEt6BrsGrkYts8Rf17Hjvn8J7MRkyE26eEyknddUa1uGtCFfLyUmmKSe53qaGl5MvvqPqPBSofY8Gm6ChApTr-OPfU1xvjpUPfrkkCmWakymG9FmbqOM7BLPlkuzd7waX6z3-
+
+@startuml
+class Program
+{
+run():void
+}
+class Event
+{
+# _eventTitle: string
+# _description: string
+# _date: datetime
+# _time: datetime
+# _address: string
+# _standardDetails: string
+# _fullDetails: string
++ Event:(eventTitle: string, description: string, date: datetime, time: datetime, address: string)
++ GetEventTitle():string
++ GetDescription():string
++ GetDate(): datetime
++ GetTime(): datetime
++ GetAddress(): string
++ GetStandardDetails(): string
++ GetFullDetails(): string
+}
+class Lecture
+{
+- _speakerName: string
+- _capacity: int
++ Lecture(eventTitle: string, description: string, date: datetime, time: datetime, address: string, speakerName: string, capacity: int)
++ GetSpeakerName(); string
++ GetCapacity(): int
++ GetFullDetails(): void
+}
+class Reception
+{
+- _emailRSVP: string
++ Reception(eventTitle: string, description: string, date: datetime, time: datetime, address: string, emailRSVP: string)
++ GetEmailRSVP(): string
++ GetFullDetails(): void
+}
+class OutdoorGathering
+{
+- _weather: string
++ OutdoorGathering(eventTitle: string, description: string, date: datetime, time: datetime, address: string, weather: string)
++ GetWeather(): string
++ GetFullDetails(): void
+}
+Event <|-- Lecture
+Event <|-- Reception
+Event <|-- OutdoorGathering
+@enduml

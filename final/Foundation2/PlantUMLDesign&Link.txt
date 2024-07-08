@@ -1,0 +1,51 @@
+www.plantuml.com/plantuml/png/RPFTYXmX48NlVOg2t2ZE4qW8kqn8M5YI3PEz3gwQYSJMYJ-1CFIxfxkrjjlPdYkjEkSRJzdUfInZBeCZoicKu2c6SvJ35UOVuH2Bfqp0ts0r6SbnqHnBoc4maLp9E_YXskwB78o0bAFrvxakjOuc9G7tTJ71q4ZzHdk0MoKZV5uUD-3gg0OcbjDmE9dS71GHI439vrN2i5dB7PqrzDIowS4_d-xdq2yXE2Cz6Tjiq7-5ET_aCA_qRN1byp_SLw7CfXE4udDSDHp9T9TvW4h47VAmsTFOag5FK1D_Aiurz1fuNEzT5vLRjalTTLUwbXy-Wh0-rufLvid4Ps-pW9ykoANyfqYVbqFFEevqkiCzm2jrKSCEyW0TaDKy3TfVOEqWaRB5WDKLJ5b5jzQtXk_qtqEMxXZIHepJ-XerVlxjz4d0eqtvVVlh3zkN8TONmwkLlctDeQJMDvCIE3fyWnoKTAeucStE-JYSfvnI_Pv6yIXVZACCvrnxfr_sSjbfZkJEU5q6zny0@startuml 
+
+@startuml
+class Program{     
++ run(): void
+}
+Class Customer
+{
+# _customerName: string
+# _address: Address
++ Customer(name: string, address: Address)
++ AddCustomerName(name:string):void
++ SetAddress(address:Address):void
++ GetAddress():Address
++ GetCustomerName():string
++ isInUSA(): boolean
+}
+class Address
+{ 
+# _streetAddress: string
+# _city: string
+# _state: string
+# _country: string
++ Address(streetAddress: string, city: string, state: string, country: string)
++ isUSA(): boolean
++ GetFullAddress():string
+}
+class Product
+{ 
+# _productName: string
+# _productID :int
+# _pricePerUnit: float
+# _quantity: int
++ Product(productName: string, productID: int pricePerUnit: float, quantity: int)
++ GetProductName():string
++ GetProductID(): int
++ GetPricePerUnit(): float
++ GetQuantity(): int
++ GetTotalCost(): float
+}
+class Order
+{
+# _products: List<Product>
+# _customer: Customer
++ Order(customer: Customer)
++ addProduct(product: Product): void
++ calculateTotalCost(): float
++ getPackingLabel(): string
++ getShippingLabel(): string
+}
+@enduml
