@@ -2,9 +2,8 @@ using System;
 
 class Program
 {
-    public void run()
-     {
-
-    }
+    static void Main(string[] args)
+    { }
+   
   
 }

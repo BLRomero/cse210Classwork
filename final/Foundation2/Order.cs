@@ -18,7 +18,7 @@ class Order
     public float calculateTotalCost()
     {
         float _totalCost = 0;
-        foreach(var product in _products)
+        foreach (var product in _products)
         {
             _totalCost += product.GetTotalCost();
 
@@ -26,5 +26,8 @@ class Order
         return _totalCost;
     }
 
-
+    public string getShippingLabel()
+    {
+        return $"Ship to: {_customer.GetCustomerName()}, {_customer.GetAddress().GetFullAddress()}";
+    }
 }

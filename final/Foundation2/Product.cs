@@ -15,24 +15,28 @@ public class Product
         _productID = productID;
         _pricePerUnit = pricePerUnit;
         _quantity = quantity;
-    } 
-    public string GetProductName(){
-        return _productName
+    }
+    public string GetProductName()
+    {
+        return _productName;
     }
 
- public int GetProductID(){
+    public int GetProductID()
+    {
         return _productID;
     }
 
- public float GetPricePerUnit(){
+    public float GetPricePerUnit()
+    {
         return _pricePerUnit;
     }
-     public int GetQuanity(){
+    public int GetQuanity()
+    {
         return _quantity;
     }
-public float GetTotalCost()
+    public float GetTotalCost()
     {
         return _pricePerUnit * _quantity;
-}
+    }
 
 }
