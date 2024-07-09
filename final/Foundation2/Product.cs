@@ -30,7 +30,7 @@ public class Product
     {
         return _pricePerUnit;
     }
-    public int GetQuanity()
+    public int GetQuantity()
     {
         return _quantity;
     }
