@@ -25,9 +25,18 @@ class Order
         }
         return _totalCost;
     }
-
+    public string getPackingLabel()
+    {
+        string packingLabel = "Packing List:\n";
+        foreach (var product in _products)
+        {
+            packingLabel += $"{product.GetProductName()} - {product.GetQuantity()} units\n";
+        }
+        return packingLabel;
+    }
     public string getShippingLabel()
     {
-        return $"Ship to: {_customer.GetCustomerName()}, {_customer.GetAddress().GetFullAddress()}";
+        return $"Ship to:\n{_customer.GetCustomerName()},\n{_customer.GetAddress().GetFullAddress()}";
     }
+  
 }
