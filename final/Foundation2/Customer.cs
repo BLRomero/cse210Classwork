@@ -11,14 +11,9 @@ class Customer
         _address = address;
     }
 
-    public void AddCustomerName(string name)
+    public string GetCustomerName()
     {
-        _customerName = name;
-    }
-
-    public void SetAddress(Address address)
-    {
-        _address = address;
+        return _customerName;
     }
 
     public Address GetAddress()
@@ -26,13 +21,8 @@ class Customer
         return _address;
     }
 
-    public string GetCustomerName()
+    public bool IsInUSA()
     {
-        return _customerName;
-    }
-
-    public bool isInUSA()
-    {
-        return _address.isUSA();
+        return _address.IsUSA();
     }
 }

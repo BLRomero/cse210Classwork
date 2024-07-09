@@ -8,6 +8,7 @@ public class Product
     protected int _productID;
     protected float _pricePerUnit;
     protected int _quantity;
+    
 
     public Product(string productName, int productID, float pricePerUnit, int quantity)
     {
@@ -34,9 +35,10 @@ public class Product
     {
         return _quantity;
     }
-    public float GetTotalCost()
+
+  public float GetTotalCost()
     {
-        return _pricePerUnit * _quantity;
+        return _pricePerUnit * _quantity ;
     }
 
 }

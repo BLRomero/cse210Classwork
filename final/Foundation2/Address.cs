@@ -15,11 +15,14 @@ class Address
         _country = country;
     }
 
-    public bool isUSA()
+    public bool IsUSA()
     {
         return _country.Equals("USA", StringComparison.OrdinalIgnoreCase);
     }
-
+    public string GetCountry()
+    {
+        return _country;
+    }
     public string GetFullAddress()
     {
         return $"{_streetAddress}, {_city}, {_state}, {_country}";

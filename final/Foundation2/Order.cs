@@ -1,31 +1,44 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.VisualBasic;
+using System.Linq;
+
 class Order
 {
-
     private List<Product> _products;
     private Customer _customer;
+
     public Order(Customer customer)
     {
         _customer = customer;
         _products = new List<Product>();
     }
-    public void addProduct(Product product)
+
+    public void AddProduct(Product product)
     {
         _products.Add(product);
     }
-    public float calculateTotalCost()
-    {
-        float _totalCost = 0;
-        foreach (var product in _products)
-        {
-            _totalCost += product.GetTotalCost();
 
-        }
-        return _totalCost;
+    public float CalculateTotalCost()
+    {
+        float totalCost = _products.Sum(product => product.GetTotalCost());
+        totalCost += CalculateShippingCost();
+        return (float)Math.Round(totalCost, 2);
     }
-    public string getPackingLabel()
+
+    private float CalculateShippingCost()
+    {
+        if (_customer.GetAddress().IsUSA())
+        {
+            return 5.00f;
+        }
+
+        else
+        {
+            return 35.00f;
+        }
+    }
+
+    public string GetPackingLabel()
     {
         string packingLabel = "Packing List:\n";
         foreach (var product in _products)
@@ -34,9 +47,9 @@ class Order
         }
         return packingLabel;
     }
-    public string getShippingLabel()
+
+    public string GetShippingLabel()
     {
         return $"Ship to:\n{_customer.GetCustomerName()},\n{_customer.GetAddress().GetFullAddress()}";
     }
-  
 }
