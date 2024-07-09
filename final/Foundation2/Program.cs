@@ -4,9 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Your program logic goes here
-
-        // Example: Creating an instance of Order and performing operations
         Address address = new Address("123 Hwy 90 East", "Castroville", "Tx", "USA");
         Customer customer = new Customer("M Haby", address);
 
@@ -40,9 +37,6 @@ class Program
         Console.WriteLine($"Total Cost: ${order2.CalculateTotalCost()}");
         Console.WriteLine();
         Console.WriteLine();
-
-
-
     }
 }
 
