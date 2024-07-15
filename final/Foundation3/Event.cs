@@ -12,8 +12,13 @@ class Event
     protected string _standardDetails;
     protected string _FullDetails;
 
-    public Event(string Event, string descritption, DateTime date, DateTime time, string address)
+    public Event(string eventTitle, string description, DateTime date, DateTime time, string address)
     {
+        _eventTitle = eventTitle;
+        _description = description;
+        _date = date;
+        _time = time;
+        _address = address;
 
     }
 
