@@ -5,13 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Specify the file name
-        string fileName = "YoutubeVideos.txt";
-
-        // Load videos from the file
-        List<Video> videos = Video.LoadVideosFromFile(fileName);
-
-        // Display the loaded videos
+        string _fileName = "YoutubeVideos.txt";
+        List<Video> videos = Video.LoadVideosFromFile(_fileName);
         Video.DisplayVideos(videos);
     }
 }

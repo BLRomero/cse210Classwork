@@ -22,16 +22,16 @@ public class Video
     }
 
     // Static method to read videos from a file and return a list of Video objects
-    public static List<Video> LoadVideosFromFile(string fileName)
+    public static List<Video> LoadVideosFromFile(string _fileName)
     {
         List<Video> videos = new List<Video>();
         Video currentVideo = null;
 
         try
         {
-            if (File.Exists(fileName))
+            if (File.Exists(_fileName))
             {
-                string[] lines = File.ReadAllLines(fileName);
+                string[] lines = File.ReadAllLines(_fileName);
 
                 foreach (string line in lines)
                 {
