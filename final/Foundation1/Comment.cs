@@ -3,9 +3,8 @@ using System;
 public class Comment
 {
     // Properties
-    public string _username { get; set; }
-    public string _text { get; set; }
-
+    private string _username;
+    private string _text;
     // Constructor
     public Comment(string username, string text)
     {

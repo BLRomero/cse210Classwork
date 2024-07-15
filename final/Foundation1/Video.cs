@@ -5,11 +5,11 @@ using System.IO;
 public class Video
 {
     // Properties
-    public string _title { get; set; }
-    public string _author { get; set; }
-    public string _length { get; set; }
-    public int _numberOfComments { get; set; }
-    public List<Comment> _comments { get; set; }
+    private string _title;
+    private string _author;
+    private string _length;
+    private int _numberOfComments;
+    private List<Comment> _comments;
 
     // Constructor
     public Video(string title, string author, string length, int numberOfComments, List<Comment> comments)
