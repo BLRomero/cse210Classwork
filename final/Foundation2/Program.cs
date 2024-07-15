@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Address address = new Address("123 Hwy 90 East", "Castroville", "Tx", "USA");
-        Customer customer = new Customer("M Haby", address);
+        Customer customer = new Customer("Mr. Michael Haby", address);
 
         Product product1 = new Product("Freshie", 1, 9.99f, 5);
         Product product2 = new Product("Air Freshener", 2, 4.99f, 3);

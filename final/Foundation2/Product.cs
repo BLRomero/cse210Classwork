@@ -3,11 +3,11 @@ using System.Security.Cryptography;
 
 public class Product
 {
-    protected string _productName;
-    protected int _productID;
-    protected float _pricePerUnit;
-    protected int _quantity;
-    
+    private string _productName;
+    private int _productID;
+    private float _pricePerUnit;
+    private int _quantity;
+
     public Product(string productName, int productID, float pricePerUnit, int quantity)
     {
         _productName = productName;
@@ -31,9 +31,9 @@ public class Product
     {
         return _quantity;
     }
-  public float GetTotalCost()
+    public float GetTotalCost()
     {
-        return _pricePerUnit * _quantity ;
+        return _pricePerUnit * _quantity;
     }
 
 }
