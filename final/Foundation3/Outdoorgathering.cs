@@ -4,14 +4,19 @@ using System.Threading;
 class OutdoorGathering : Event
 {
     protected string _weather;
+    protected char _degreeSymbol = '\u00B0';
 
-    public OutdoorGathering(string eventTitle, string description, DateTime date, DateTime time, string address) : base(eventTitle, description, date, time, address)
+
+    public OutdoorGathering(string eventTitle, string description, DateTime date, DateTime time, string address, string weather) : base(eventTitle, description, date, time, address)
     {
+        _weather = weather;
+        
 
     }
-    public void FullDetails()
-    {
-        Console.WriteLine($"Event: {_eventTitle}\n{_description}\nDate & Time: {_date}, {_time}\n{_address}\n{_weather}");
+    public new void PrintFullDetails(){
+        base.PrintFullDetails();
+        Console.WriteLine($"Expected weather for Event: {_weather}{_degreeSymbol}F");
+       
     }
 
 
